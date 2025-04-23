@@ -23,6 +23,16 @@ def query_root_server_for_tld(domain, start_time):
     except Exception as e:
         print(f"❌ Помилка при запиті до root-сервера: {e}")
 
+
+def get_authoritative_ns(domain):
+    try:
+        answers = dns.resolver.resolve(domain, 'NS')
+        ns_list = [str(rdata.target).rstrip('.') for rdata in answers]
+        return ns_list
+    except Exception as e:
+        print(f"❌ Помилка отримання NS записів: {e}")
+        return []
+
 def resolve_authoritative_ns_to_ip(authoritative_ns, start_time):
     ns_ips = []
     for ns in authoritative_ns:
@@ -58,7 +68,10 @@ def analyze_domain(domain):
 
     query_root_server_for_tld(domain, start_time)
 
-    authoritative_ns = ['ns0.wikimedia.org', 'ns1.wikimedia.org', 'ns2.wikimedia.org']
+    authoritative_ns = get_authoritative_ns(domain)
+    if not authoritative_ns:
+        print("❌ Не вдалося отримати авторитетні NS.")
+        return
     ns_ips = resolve_authoritative_ns_to_ip(authoritative_ns, start_time)
 
     for ip in ns_ips:
@@ -67,6 +80,7 @@ def analyze_domain(domain):
     print(f"\n⏱️ Загальний час: {round(time.time() - start_time, 3)} сек")
 
 # Приклад використання
-analyze_domain('pornhub.com')
+site = input("Введіть сайт: ")
+analyze_domain(site)
 
 
