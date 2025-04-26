@@ -1,86 +1,129 @@
 import dns.resolver
+import dns.exception
 import time
-import socket
+import logging
 
-def get_ip_from_ns(nameserver):
-    try:
-        return socket.gethostbyname(nameserver)
-    except socket.gaierror as e:
-        print(f"❌ Не вдалося отримати IP для {nameserver}: {e}")
-        return None
+# ===== Налаштування логування =====
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(message)s',
+    handlers=[
+        # Для накопичення логів змінити на mode='a'
+        logging.FileHandler("dns_output.txt", mode='a', encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
 
-def query_root_server_for_tld(domain, start_time):
+# ===== Список кореневих серверів (root hints) =====
+ROOT_SERVERS = [
+    '198.41.0.4',    # a.root-servers.net
+    '199.9.14.201',  # b.root-servers.net
+    '192.33.4.12',   # c.root-servers.net
+    # ... можна додати залишок за потреби
+]
+
+
+def query_tld_ns(domain):
+    """Отримати авторитетні NS для домену через локальний резолвер"""
     tld = domain.split('.')[-1]
-    print(f"\n🔎 Отримання NS-серверів для TLD: .{tld}")
-
-    try:
-        resolver = dns.resolver.Resolver()
-        response = resolver.resolve(domain, 'NS')
-        print(f"✅ Відповідь отримано за {round(time.time() - start_time, 3)} сек")
-        print("📌 NS-сервери домену:")
-        for ns in response:
-            print(f" - {ns.target}")
-    except Exception as e:
-        print(f"❌ Помилка при запиті до root-сервера: {e}")
-
-
-def get_authoritative_ns(domain):
+    logging.info(f"\n🔎 Отримання NS-серверів для TLD: .{tld}")
+    start = time.time()
     try:
         answers = dns.resolver.resolve(domain, 'NS')
-        ns_list = [str(rdata.target).rstrip('.') for rdata in answers]
+        elapsed = round(time.time() - start, 3)
+        ns_list = [str(r.target).rstrip('.') for r in answers]
+        logging.info(f"✅ Знайдено {len(ns_list)} NS за {elapsed} сек:")
+        for ns in ns_list:
+            logging.info(f" - {ns}")
         return ns_list
-    except Exception as e:
-        print(f"❌ Помилка отримання NS записів: {e}")
-        return []
+    except dns.resolver.NXDOMAIN:
+        logging.error(f"❌ Домен {domain} не існує (NXDOMAIN)")
+    except dns.exception.DNSException as e:
+        logging.error(f"❌ Помилка DNS: {e}")
+    return []
 
-def resolve_authoritative_ns_to_ip(authoritative_ns, start_time):
-    ns_ips = []
-    for ns in authoritative_ns:
-        print(f"\n🌐 Отримання IP для {ns}")
-        ip = get_ip_from_ns(ns)
-        if ip:
-            print(f"✅ IP: {ip}")
-            ns_ips.append(ip)
+
+def resolve_ns_ips(ns_list):
+    """Отримати IPv4 та IPv6 адреси для кожного NS"""
+    ns_ips = {}
+    for ns in ns_list:
+        ips = []
+        for rtype in ('A', 'AAAA'):
+            try:
+                answers = dns.resolver.resolve(ns, rtype, raise_on_no_answer=False)
+                if answers.rrset:
+                    for r in answers:
+                        ips.append(r.address)
+            except dns.exception.DNSException as e:
+                logging.warning(f"⚠️ {rtype}-запит до {ns} дав помилку: {e}")
+        if ips:
+            ns_ips[ns] = ips
+        else:
+            logging.error(f"❌ Не вдалося отримати жодної IP для {ns}")
     return ns_ips
 
-def query_dns_records_from_ns(domain, ns_ip, start_time):
-    resolver = dns.resolver.Resolver()
-    record_types = ['A', 'MX', 'AAAA', 'TXT']
-    
-    for rtype in record_types:
-        print(f"\n📥 Запит {rtype}-записів у {ns_ip} для {domain}")
-        try:
-            response = resolver.resolve(domain, rtype)
-            print(f"✅ Відповідь за {round(time.time() - start_time, 3)} сек")
-            for r in response:
-                if rtype == 'TXT':
-                    print(f"📄 TXT: {', '.join([str(s) for s in r.strings])}")
-                elif rtype in ['A', 'AAAA']:
-                    print(f"📄 {rtype}: {r.address}")
-                elif rtype == 'MX':
-                    print(f"📄 MX: {r.exchange}, пріоритет: {r.preference}")
-        except Exception as e:
-            print(f"❌ Помилка для {rtype}: {e}")
+
+def query_records(domain, ns_ips):
+    """Запитувати різні DNS-записи у кожного NS"""
+    record_types = ['A', 'AAAA', 'MX', 'TXT', 'SOA', 'CAA']
+
+    for ns, ips in ns_ips.items():
+        for ip in ips:
+            logging.info(f"\n🖥️ Запити до {ns} ({ip})")
+            resolver = dns.resolver.Resolver(configure=False)
+            resolver.nameservers = [ip]
+            for rtype in record_types:
+                logging.info(f"📥 {rtype}-запис для {domain}")
+                start = time.time()
+                try:
+                    response = resolver.resolve(domain, rtype, raise_on_no_answer=False)
+                    elapsed = round(time.time() - start, 3)
+                    if response.rrset:
+                        logging.info(f"✅ {rtype} отримано за {elapsed} сек")
+                        for r in response:
+                            if rtype == 'TXT':
+                                texts = [s.decode() for s in r.strings]
+                                logging.info(f"📄 TXT: {', '.join(texts)}")
+                            elif rtype in ('A', 'AAAA'):
+                                logging.info(f"📄 {rtype}: {r.address}")
+                            elif rtype == 'MX':
+                                logging.info(f"📄 MX: {r.exchange}, пріоритет: {r.preference}")
+                            elif rtype == 'SOA':
+                                logging.info(f"📄 SOA: {r.mname} {r.rname} (ser: {r.serial})")
+                            elif rtype == 'CAA':
+                                logging.info(f"📄 CAA: {r.flags} {r.tag} {r.value}")
+                    else:
+                        logging.info(f"ℹ️ Записів типу {rtype} немає")
+                except dns.resolver.NoAnswer:
+                    logging.info(f"ℹ️ Немає відповіді для {rtype}")
+                except dns.resolver.NXDOMAIN:
+                    logging.error(f"❌ NXDOMAIN при запиті {rtype}")
+                except dns.exception.Timeout:
+                    logging.error(f"❌ Таймаут при запиті {rtype}")
+                except Exception as e:
+                    logging.error(f"❌ Помилка при {rtype}: {e}")
+
 
 def analyze_domain(domain):
     start_time = time.time()
-    print(f"\n🔍 Аналіз домену: {domain}")
+    logging.info(f"🔍 Початок аналізу домену: {domain}")
 
-    query_root_server_for_tld(domain, start_time)
-
-    authoritative_ns = get_authoritative_ns(domain)
+    # 1. Отримуємо NS-записи
+    authoritative_ns = query_tld_ns(domain)
     if not authoritative_ns:
-        print("❌ Не вдалося отримати авторитетні NS.")
         return
-    ns_ips = resolve_authoritative_ns_to_ip(authoritative_ns, start_time)
 
-    for ip in ns_ips:
-        query_dns_records_from_ns(domain, ip, start_time)
+    # 2. Отримуємо IP NS
+    ns_ips = resolve_ns_ips(authoritative_ns)
+    if not ns_ips:
+        return
 
-    print(f"\n⏱️ Загальний час: {round(time.time() - start_time, 3)} сек")
+    # 3. Запитуємо DNS-записи без додаткової фільтрації TCP
+    query_records(domain, ns_ips)
 
-# Приклад використання
-site = input("Введіть сайт: ")
-analyze_domain(site)
+    logging.info(f"⏱️ Загальний час: {round(time.time() - start_time, 3)} сек")
 
 
+if __name__ == '__main__':
+    site = input("Введіть домен для аналізу: ")
+    analyze_domain(site)
