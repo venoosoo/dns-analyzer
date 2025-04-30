@@ -1,328 +1,235 @@
-
-
-🔍 Початок аналізу домену: google.com
+🔍 Початок аналізу домену: chatgpt.com
 
 🔎 Отримання NS-серверів для TLD: .com
-✅ Знайдено 4 NS за 0.01 сек:
- - ns3.google.com
- - ns4.google.com
- - ns2.google.com
- - ns1.google.com
-⚠️ Пропуск ns3.google.com (2001:4860:4802:36::a): мережа недоступна
-⚠️ Пропуск ns4.google.com (2001:4860:4802:38::a): мережа недоступна
-⚠️ Пропуск ns2.google.com (2001:4860:4802:34::a): мережа недоступна
-⚠️ Пропуск ns1.google.com (2001:4860:4802:32::a): мережа недоступна
+✅ Знайдено 2 NS за 0.027 сек:
+ - hassan.ns.cloudflare.com
+ - savanna.ns.cloudflare.com
 
-🖥️ Запити до ns3.google.com (216.239.36.10)
-📥 A-запис для google.com
-✅ A отримано за 0.046 сек
-📄 A: 142.250.203.142
-📥 AAAA-запис для google.com
-✅ AAAA отримано за 0.047 сек
-📄 AAAA: 2a00:1450:401b:80e::200e
-📥 MX-запис для google.com
-✅ MX отримано за 0.048 сек
-📄 MX: smtp.google.com., пріоритет: 10
-📥 TXT-запис для google.com
-✅ TXT отримано за 0.141 сек
-📄 TXT: onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef
-📄 TXT: facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95
-📄 TXT: google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o
-📄 TXT: docusign=1b0a6754-49b1-4db5-8540-d2c12664b289
-📄 TXT: google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0
-📄 TXT: cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963
-📄 TXT: v=spf1 include:_spf.google.com ~all
-📄 TXT: apple-domain-verification=30afIBcvSuDV2PLX
-📄 TXT: docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e
-📄 TXT: globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8=
-📄 TXT: google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ
-📄 TXT: MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB
-📥 SOA-запис для google.com
-✅ SOA отримано за 0.048 сек
-📄 SOA: ns1.google.com. dns-admin.google.com. (ser: 751344373)
-📥 CAA-запис для google.com
-✅ CAA отримано за 0.048 сек
-📄 CAA: 0 b'issue' b'pki.goog'
+🖥️ Запити до hassan.ns.cloudflare.com (108.162.195.149)
+📥 A-запис для chatgpt.com
+✅ A отримано за 0.032 сек
+📄 A: 104.18.32.47
+📄 A: 172.64.155.209
+📥 AAAA-запис для chatgpt.com
+✅ AAAA отримано за 0.032 сек
+📄 AAAA: 2606:4700:4400::ac40:9bd1
+📄 AAAA: 2606:4700:4400::6812:202f
+📥 MX-запис для chatgpt.com
+ℹ️ Записів типу MX немає
+📥 TXT-запис для chatgpt.com
+✅ TXT отримано за 0.032 сек
+📄 TXT: google-site-verification=qz8yKZH1f2h4Dl7S-nRAo0immoInmiosRhyjUxXuUOs
+📄 TXT: google-site-verification=rZodbEw8Hlw3gg7Z7mxkmQUNPnO_1khlohRX5D6qeUo
+📄 TXT: google-site-verification=u3JFUrrlvyiaVlGsdIRMgmuvDluR6gC-TIPBEQLbl8c
+📄 TXT: google-site-verification=vHr-4wFDXLd3wze6i0YimpiGHC1u0Hy3x1dGAiyeHWs
+📄 TXT: v=spf1 -all
+📥 SOA-запис для chatgpt.com
+✅ SOA отримано за 0.025 сек
+📄 SOA: hassan.ns.cloudflare.com. dns.cloudflare.com. (ser: 2371478272)
+📥 CAA-запис для chatgpt.com
+ℹ️ Записів типу CAA немає
 
-🖥️ Запити до ns4.google.com (216.239.38.10)
-📥 A-запис для google.com
-✅ A отримано за 0.042 сек
-📄 A: 142.250.203.142
-📥 AAAA-запис для google.com
-✅ AAAA отримано за 0.041 сек
-📄 AAAA: 2a00:1450:401b:80e::200e
-📥 MX-запис для google.com
-✅ MX отримано за 0.043 сек
-📄 MX: smtp.google.com., пріоритет: 10
-📥 TXT-запис для google.com
-✅ TXT отримано за 0.126 сек
-📄 TXT: globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8=
-📄 TXT: apple-domain-verification=30afIBcvSuDV2PLX
-📄 TXT: facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95
-📄 TXT: v=spf1 include:_spf.google.com ~all
-📄 TXT: google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0
-📄 TXT: docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e
-📄 TXT: MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB
-📄 TXT: google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o
-📄 TXT: google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ
-📄 TXT: onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef
-📄 TXT: cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963
-📄 TXT: docusign=1b0a6754-49b1-4db5-8540-d2c12664b289
-📥 SOA-запис для google.com
-✅ SOA отримано за 0.042 сек
-📄 SOA: ns1.google.com. dns-admin.google.com. (ser: 751344373)
-📥 CAA-запис для google.com
-✅ CAA отримано за 0.042 сек
-📄 CAA: 0 b'issue' b'pki.goog'
-
-🖥️ Запити до ns2.google.com (216.239.34.10)
-📥 A-запис для google.com
-✅ A отримано за 0.061 сек
-📄 A: 142.250.203.142
-📥 AAAA-запис для google.com
-✅ AAAA отримано за 0.062 сек
-📄 AAAA: 2a00:1450:401b:80e::200e
-📥 MX-запис для google.com
-✅ MX отримано за 0.063 сек
-📄 MX: smtp.google.com., пріоритет: 10
-📥 TXT-запис для google.com
-✅ TXT отримано за 0.186 сек
-📄 TXT: google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o
-📄 TXT: google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ
-📄 TXT: docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e
-📄 TXT: onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef
-📄 TXT: apple-domain-verification=30afIBcvSuDV2PLX
-📄 TXT: docusign=1b0a6754-49b1-4db5-8540-d2c12664b289
-📄 TXT: globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8=
-📄 TXT: v=spf1 include:_spf.google.com ~all
-📄 TXT: google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0
-📄 TXT: cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963
-📄 TXT: facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95
-📄 TXT: MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB
-📥 SOA-запис для google.com
-✅ SOA отримано за 0.063 сек
-📄 SOA: ns1.google.com. dns-admin.google.com. (ser: 751344373)
-📥 CAA-запис для google.com
-✅ CAA отримано за 0.062 сек
-📄 CAA: 0 b'issue' b'pki.goog'
-
-🖥️ Запити до ns1.google.com (216.239.32.10)
-📥 A-запис для google.com
+🖥️ Запити до hassan.ns.cloudflare.com (162.159.44.149)
+📥 A-запис для chatgpt.com
 ✅ A отримано за 0.044 сек
-📄 A: 142.250.203.142
-📥 AAAA-запис для google.com
-✅ AAAA отримано за 0.044 сек
-📄 AAAA: 2a00:1450:401b:80e::200e
-📥 MX-запис для google.com
-✅ MX отримано за 0.046 сек
-📄 MX: smtp.google.com., пріоритет: 10
-📥 TXT-запис для google.com
-✅ TXT отримано за 0.133 сек
-📄 TXT: globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8=
-📄 TXT: google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o
-📄 TXT: docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e
-📄 TXT: docusign=1b0a6754-49b1-4db5-8540-d2c12664b289
-📄 TXT: google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0
-📄 TXT: facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95
-📄 TXT: v=spf1 include:_spf.google.com ~all
-📄 TXT: MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB
-📄 TXT: google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ
-📄 TXT: apple-domain-verification=30afIBcvSuDV2PLX
-📄 TXT: onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef
-📄 TXT: cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963
-📥 SOA-запис для google.com
-✅ SOA отримано за 0.046 сек
-📄 SOA: ns1.google.com. dns-admin.google.com. (ser: 751344373)
-📥 CAA-запис для google.com
-✅ CAA отримано за 0.045 сек
-📄 CAA: 0 b'issue' b'pki.goog'
-⏱️ Загальний час: 2.028 сек
-🔍 Початок аналізу домену: google.com
-
-🔎 Отримання NS-серверів для TLD: .com
-✅ Знайдено 4 NS за 0.004 сек:
- - ns2.google.com
- - ns3.google.com
- - ns4.google.com
- - ns1.google.com
-
-🖥️ Запити до ns2.google.com (216.239.34.10)
-📥 A-запис для google.com
-✅ A отримано за 0.062 сек
-📄 A: 142.250.203.142
-📥 AAAA-запис для google.com
-✅ AAAA отримано за 0.061 сек
-📄 AAAA: 2a00:1450:401b:80e::200e
-📥 MX-запис для google.com
-✅ MX отримано за 0.063 сек
-📄 MX: smtp.google.com., пріоритет: 10
-📥 TXT-запис для google.com
-✅ TXT отримано за 0.185 сек
-📄 TXT: google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o
-📄 TXT: apple-domain-verification=30afIBcvSuDV2PLX
-📄 TXT: onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef
-📄 TXT: docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e
-📄 TXT: google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ
-📄 TXT: cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963
-📄 TXT: v=spf1 include:_spf.google.com ~all
-📄 TXT: globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8=
-📄 TXT: MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB
-📄 TXT: google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0
-📄 TXT: docusign=1b0a6754-49b1-4db5-8540-d2c12664b289
-📄 TXT: facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95
-📥 SOA-запис для google.com
-✅ SOA отримано за 0.062 сек
-📄 SOA: ns1.google.com. dns-admin.google.com. (ser: 751344373)
-📥 CAA-запис для google.com
-✅ CAA отримано за 0.063 сек
-📄 CAA: 0 b'issue' b'pki.goog'
-
-🖥️ Запити до ns2.google.com (2001:4860:4802:34::a)
-📥 A-запис для google.com
-❌ Помилка при A: All nameservers failed to answer the query google.com. IN A: Server Do53:2001:4860:4802:34::a@53 answered [Errno 101] Network is unreachable
-📥 AAAA-запис для google.com
-❌ Помилка при AAAA: All nameservers failed to answer the query google.com. IN AAAA: Server Do53:2001:4860:4802:34::a@53 answered [Errno 101] Network is unreachable
-📥 MX-запис для google.com
-❌ Помилка при MX: All nameservers failed to answer the query google.com. IN MX: Server Do53:2001:4860:4802:34::a@53 answered [Errno 101] Network is unreachable
-📥 TXT-запис для google.com
-❌ Помилка при TXT: All nameservers failed to answer the query google.com. IN TXT: Server Do53:2001:4860:4802:34::a@53 answered [Errno 101] Network is unreachable
-📥 SOA-запис для google.com
-❌ Помилка при SOA: All nameservers failed to answer the query google.com. IN SOA: Server Do53:2001:4860:4802:34::a@53 answered [Errno 101] Network is unreachable
-📥 CAA-запис для google.com
-❌ Помилка при CAA: All nameservers failed to answer the query google.com. IN CAA: Server Do53:2001:4860:4802:34::a@53 answered [Errno 101] Network is unreachable
-
-🖥️ Запити до ns3.google.com (216.239.36.10)
-📥 A-запис для google.com
-✅ A отримано за 0.046 сек
-📄 A: 142.250.203.142
-📥 AAAA-запис для google.com
-✅ AAAA отримано за 0.046 сек
-📄 AAAA: 2a00:1450:401b:80e::200e
-📥 MX-запис для google.com
-✅ MX отримано за 0.047 сек
-📄 MX: smtp.google.com., пріоритет: 10
-📥 TXT-запис для google.com
-✅ TXT отримано за 0.14 сек
-📄 TXT: v=spf1 include:_spf.google.com ~all
-📄 TXT: MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB
-📄 TXT: google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ
-📄 TXT: globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8=
-📄 TXT: docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e
-📄 TXT: apple-domain-verification=30afIBcvSuDV2PLX
-📄 TXT: cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963
-📄 TXT: google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o
-📄 TXT: facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95
-📄 TXT: onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef
-📄 TXT: google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0
-📄 TXT: docusign=1b0a6754-49b1-4db5-8540-d2c12664b289
-📥 SOA-запис для google.com
-✅ SOA отримано за 0.048 сек
-📄 SOA: ns1.google.com. dns-admin.google.com. (ser: 751344373)
-📥 CAA-запис для google.com
-✅ CAA отримано за 0.046 сек
-📄 CAA: 0 b'issue' b'pki.goog'
-
-🖥️ Запити до ns3.google.com (2001:4860:4802:36::a)
-📥 A-запис для google.com
-❌ Помилка при A: All nameservers failed to answer the query google.com. IN A: Server Do53:2001:4860:4802:36::a@53 answered [Errno 101] Network is unreachable
-📥 AAAA-запис для google.com
-❌ Помилка при AAAA: All nameservers failed to answer the query google.com. IN AAAA: Server Do53:2001:4860:4802:36::a@53 answered [Errno 101] Network is unreachable
-📥 MX-запис для google.com
-❌ Помилка при MX: All nameservers failed to answer the query google.com. IN MX: Server Do53:2001:4860:4802:36::a@53 answered [Errno 101] Network is unreachable
-📥 TXT-запис для google.com
-❌ Помилка при TXT: All nameservers failed to answer the query google.com. IN TXT: Server Do53:2001:4860:4802:36::a@53 answered [Errno 101] Network is unreachable
-📥 SOA-запис для google.com
-❌ Помилка при SOA: All nameservers failed to answer the query google.com. IN SOA: Server Do53:2001:4860:4802:36::a@53 answered [Errno 101] Network is unreachable
-📥 CAA-запис для google.com
-❌ Помилка при CAA: All nameservers failed to answer the query google.com. IN CAA: Server Do53:2001:4860:4802:36::a@53 answered [Errno 101] Network is unreachable
-
-🖥️ Запити до ns4.google.com (216.239.38.10)
-📥 A-запис для google.com
-✅ A отримано за 0.041 сек
-📄 A: 142.250.203.142
-📥 AAAA-запис для google.com
+📄 A: 104.18.32.47
+📄 A: 172.64.155.209
+📥 AAAA-запис для chatgpt.com
 ✅ AAAA отримано за 0.043 сек
-📄 AAAA: 2a00:1450:401b:80e::200e
-📥 MX-запис для google.com
-✅ MX отримано за 0.042 сек
-📄 MX: smtp.google.com., пріоритет: 10
-📥 TXT-запис для google.com
-✅ TXT отримано за 0.127 сек
-📄 TXT: v=spf1 include:_spf.google.com ~all
-📄 TXT: globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8=
-📄 TXT: onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef
-📄 TXT: docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e
-📄 TXT: google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o
-📄 TXT: google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0
-📄 TXT: facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95
-📄 TXT: docusign=1b0a6754-49b1-4db5-8540-d2c12664b289
-📄 TXT: cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963
-📄 TXT: MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB
-📄 TXT: google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ
-📄 TXT: apple-domain-verification=30afIBcvSuDV2PLX
-📥 SOA-запис для google.com
-✅ SOA отримано за 0.043 сек
-📄 SOA: ns1.google.com. dns-admin.google.com. (ser: 751344373)
-📥 CAA-запис для google.com
-✅ CAA отримано за 0.041 сек
-📄 CAA: 0 b'issue' b'pki.goog'
+📄 AAAA: 2606:4700:4400::6812:202f
+📄 AAAA: 2606:4700:4400::ac40:9bd1
+📥 MX-запис для chatgpt.com
+ℹ️ Записів типу MX немає
+📥 TXT-запис для chatgpt.com
+✅ TXT отримано за 0.047 сек
+📄 TXT: google-site-verification=qz8yKZH1f2h4Dl7S-nRAo0immoInmiosRhyjUxXuUOs
+📄 TXT: google-site-verification=rZodbEw8Hlw3gg7Z7mxkmQUNPnO_1khlohRX5D6qeUo
+📄 TXT: google-site-verification=u3JFUrrlvyiaVlGsdIRMgmuvDluR6gC-TIPBEQLbl8c
+📄 TXT: google-site-verification=vHr-4wFDXLd3wze6i0YimpiGHC1u0Hy3x1dGAiyeHWs
+📄 TXT: v=spf1 -all
+📥 SOA-запис для chatgpt.com
+✅ SOA отримано за 0.042 сек
+📄 SOA: hassan.ns.cloudflare.com. dns.cloudflare.com. (ser: 2371478272)
+📥 CAA-запис для chatgpt.com
+ℹ️ Записів типу CAA немає
 
-🖥️ Запити до ns4.google.com (2001:4860:4802:38::a)
-📥 A-запис для google.com
-❌ Помилка при A: All nameservers failed to answer the query google.com. IN A: Server Do53:2001:4860:4802:38::a@53 answered [Errno 101] Network is unreachable
-📥 AAAA-запис для google.com
-❌ Помилка при AAAA: All nameservers failed to answer the query google.com. IN AAAA: Server Do53:2001:4860:4802:38::a@53 answered [Errno 101] Network is unreachable
-📥 MX-запис для google.com
-❌ Помилка при MX: All nameservers failed to answer the query google.com. IN MX: Server Do53:2001:4860:4802:38::a@53 answered [Errno 101] Network is unreachable
-📥 TXT-запис для google.com
-❌ Помилка при TXT: All nameservers failed to answer the query google.com. IN TXT: Server Do53:2001:4860:4802:38::a@53 answered [Errno 101] Network is unreachable
-📥 SOA-запис для google.com
-❌ Помилка при SOA: All nameservers failed to answer the query google.com. IN SOA: Server Do53:2001:4860:4802:38::a@53 answered [Errno 101] Network is unreachable
-📥 CAA-запис для google.com
-❌ Помилка при CAA: All nameservers failed to answer the query google.com. IN CAA: Server Do53:2001:4860:4802:38::a@53 answered [Errno 101] Network is unreachable
+🖥️ Запити до hassan.ns.cloudflare.com (172.64.35.149)
+📥 A-запис для chatgpt.com
+✅ A отримано за 0.029 сек
+📄 A: 172.64.155.209
+📄 A: 104.18.32.47
+📥 AAAA-запис для chatgpt.com
+✅ AAAA отримано за 0.03 сек
+📄 AAAA: 2606:4700:4400::6812:202f
+📄 AAAA: 2606:4700:4400::ac40:9bd1
+📥 MX-запис для chatgpt.com
+ℹ️ Записів типу MX немає
+📥 TXT-запис для chatgpt.com
+✅ TXT отримано за 0.028 сек
+📄 TXT: google-site-verification=qz8yKZH1f2h4Dl7S-nRAo0immoInmiosRhyjUxXuUOs
+📄 TXT: google-site-verification=rZodbEw8Hlw3gg7Z7mxkmQUNPnO_1khlohRX5D6qeUo
+📄 TXT: google-site-verification=u3JFUrrlvyiaVlGsdIRMgmuvDluR6gC-TIPBEQLbl8c
+📄 TXT: google-site-verification=vHr-4wFDXLd3wze6i0YimpiGHC1u0Hy3x1dGAiyeHWs
+📄 TXT: v=spf1 -all
+📥 SOA-запис для chatgpt.com
+✅ SOA отримано за 0.026 сек
+📄 SOA: hassan.ns.cloudflare.com. dns.cloudflare.com. (ser: 2371478272)
+📥 CAA-запис для chatgpt.com
+ℹ️ Записів типу CAA немає
 
-🖥️ Запити до ns1.google.com (216.239.32.10)
-📥 A-запис для google.com
-✅ A отримано за 0.043 сек
-📄 A: 142.250.203.142
-📥 AAAA-запис для google.com
+🖥️ Запити до hassan.ns.cloudflare.com (2803:f800:50::6ca2:c395)
+📥 A-запис для chatgpt.com
+❌ Помилка при A: All nameservers failed to answer the query chatgpt.com. IN A: Server Do53:2803:f800:50::6ca2:c395@53 answered [Errno 101] Network is unreachable
+📥 AAAA-запис для chatgpt.com
+❌ Помилка при AAAA: All nameservers failed to answer the query chatgpt.com. IN AAAA: Server Do53:2803:f800:50::6ca2:c395@53 answered [Errno 101] Network is unreachable
+📥 MX-запис для chatgpt.com
+❌ Помилка при MX: All nameservers failed to answer the query chatgpt.com. IN MX: Server Do53:2803:f800:50::6ca2:c395@53 answered [Errno 101] Network is unreachable
+📥 TXT-запис для chatgpt.com
+❌ Помилка при TXT: All nameservers failed to answer the query chatgpt.com. IN TXT: Server Do53:2803:f800:50::6ca2:c395@53 answered [Errno 101] Network is unreachable
+📥 SOA-запис для chatgpt.com
+❌ Помилка при SOA: All nameservers failed to answer the query chatgpt.com. IN SOA: Server Do53:2803:f800:50::6ca2:c395@53 answered [Errno 101] Network is unreachable
+📥 CAA-запис для chatgpt.com
+❌ Помилка при CAA: All nameservers failed to answer the query chatgpt.com. IN CAA: Server Do53:2803:f800:50::6ca2:c395@53 answered [Errno 101] Network is unreachable
+
+🖥️ Запити до hassan.ns.cloudflare.com (2a06:98c1:50::ac40:2395)
+📥 A-запис для chatgpt.com
+❌ Помилка при A: All nameservers failed to answer the query chatgpt.com. IN A: Server Do53:2a06:98c1:50::ac40:2395@53 answered [Errno 101] Network is unreachable
+📥 AAAA-запис для chatgpt.com
+❌ Помилка при AAAA: All nameservers failed to answer the query chatgpt.com. IN AAAA: Server Do53:2a06:98c1:50::ac40:2395@53 answered [Errno 101] Network is unreachable
+📥 MX-запис для chatgpt.com
+❌ Помилка при MX: All nameservers failed to answer the query chatgpt.com. IN MX: Server Do53:2a06:98c1:50::ac40:2395@53 answered [Errno 101] Network is unreachable
+📥 TXT-запис для chatgpt.com
+❌ Помилка при TXT: All nameservers failed to answer the query chatgpt.com. IN TXT: Server Do53:2a06:98c1:50::ac40:2395@53 answered [Errno 101] Network is unreachable
+📥 SOA-запис для chatgpt.com
+❌ Помилка при SOA: All nameservers failed to answer the query chatgpt.com. IN SOA: Server Do53:2a06:98c1:50::ac40:2395@53 answered [Errno 101] Network is unreachable
+📥 CAA-запис для chatgpt.com
+❌ Помилка при CAA: All nameservers failed to answer the query chatgpt.com. IN CAA: Server Do53:2a06:98c1:50::ac40:2395@53 answered [Errno 101] Network is unreachable
+
+🖥️ Запити до hassan.ns.cloudflare.com (2606:4700:58::a29f:2c95)
+📥 A-запис для chatgpt.com
+❌ Помилка при A: All nameservers failed to answer the query chatgpt.com. IN A: Server Do53:2606:4700:58::a29f:2c95@53 answered [Errno 101] Network is unreachable
+📥 AAAA-запис для chatgpt.com
+❌ Помилка при AAAA: All nameservers failed to answer the query chatgpt.com. IN AAAA: Server Do53:2606:4700:58::a29f:2c95@53 answered [Errno 101] Network is unreachable
+📥 MX-запис для chatgpt.com
+❌ Помилка при MX: All nameservers failed to answer the query chatgpt.com. IN MX: Server Do53:2606:4700:58::a29f:2c95@53 answered [Errno 101] Network is unreachable
+📥 TXT-запис для chatgpt.com
+❌ Помилка при TXT: All nameservers failed to answer the query chatgpt.com. IN TXT: Server Do53:2606:4700:58::a29f:2c95@53 answered [Errno 101] Network is unreachable
+📥 SOA-запис для chatgpt.com
+❌ Помилка при SOA: All nameservers failed to answer the query chatgpt.com. IN SOA: Server Do53:2606:4700:58::a29f:2c95@53 answered [Errno 101] Network is unreachable
+📥 CAA-запис для chatgpt.com
+❌ Помилка при CAA: All nameservers failed to answer the query chatgpt.com. IN CAA: Server Do53:2606:4700:58::a29f:2c95@53 answered [Errno 101] Network is unreachable
+
+🖥️ Запити до savanna.ns.cloudflare.com (108.162.194.136)
+📥 A-запис для chatgpt.com
+✅ A отримано за 0.028 сек
+📄 A: 104.18.32.47
+📄 A: 172.64.155.209
+📥 AAAA-запис для chatgpt.com
+✅ AAAA отримано за 0.027 сек
+📄 AAAA: 2606:4700:4400::6812:202f
+📄 AAAA: 2606:4700:4400::ac40:9bd1
+📥 MX-запис для chatgpt.com
+ℹ️ Записів типу MX немає
+📥 TXT-запис для chatgpt.com
+✅ TXT отримано за 0.027 сек
+📄 TXT: google-site-verification=qz8yKZH1f2h4Dl7S-nRAo0immoInmiosRhyjUxXuUOs
+📄 TXT: google-site-verification=rZodbEw8Hlw3gg7Z7mxkmQUNPnO_1khlohRX5D6qeUo
+📄 TXT: google-site-verification=u3JFUrrlvyiaVlGsdIRMgmuvDluR6gC-TIPBEQLbl8c
+📄 TXT: google-site-verification=vHr-4wFDXLd3wze6i0YimpiGHC1u0Hy3x1dGAiyeHWs
+📄 TXT: v=spf1 -all
+📥 SOA-запис для chatgpt.com
+✅ SOA отримано за 0.025 сек
+📄 SOA: hassan.ns.cloudflare.com. dns.cloudflare.com. (ser: 2371478272)
+📥 CAA-запис для chatgpt.com
+ℹ️ Записів типу CAA немає
+
+🖥️ Запити до savanna.ns.cloudflare.com (162.159.38.136)
+📥 A-запис для chatgpt.com
+✅ A отримано за 0.045 сек
+📄 A: 104.18.32.47
+📄 A: 172.64.155.209
+📥 AAAA-запис для chatgpt.com
 ✅ AAAA отримано за 0.044 сек
-📄 AAAA: 2a00:1450:401b:80e::200e
-📥 MX-запис для google.com
-✅ MX отримано за 0.045 сек
-📄 MX: smtp.google.com., пріоритет: 10
-📥 TXT-запис для google.com
-✅ TXT отримано за 0.131 сек
-📄 TXT: globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8=
-📄 TXT: v=spf1 include:_spf.google.com ~all
-📄 TXT: onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef
-📄 TXT: MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB
-📄 TXT: cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963
-📄 TXT: google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o
-📄 TXT: docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e
-📄 TXT: docusign=1b0a6754-49b1-4db5-8540-d2c12664b289
-📄 TXT: apple-domain-verification=30afIBcvSuDV2PLX
-📄 TXT: facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95
-📄 TXT: google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0
-📄 TXT: google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ
-📥 SOA-запис для google.com
-✅ SOA отримано за 0.046 сек
-📄 SOA: ns1.google.com. dns-admin.google.com. (ser: 751344373)
-📥 CAA-запис для google.com
-✅ CAA отримано за 0.045 сек
-📄 CAA: 0 b'issue' b'pki.goog'
+📄 AAAA: 2606:4700:4400::ac40:9bd1
+📄 AAAA: 2606:4700:4400::6812:202f
+📥 MX-запис для chatgpt.com
+ℹ️ Записів типу MX немає
+📥 TXT-запис для chatgpt.com
+✅ TXT отримано за 0.044 сек
+📄 TXT: google-site-verification=qz8yKZH1f2h4Dl7S-nRAo0immoInmiosRhyjUxXuUOs
+📄 TXT: google-site-verification=rZodbEw8Hlw3gg7Z7mxkmQUNPnO_1khlohRX5D6qeUo
+📄 TXT: google-site-verification=u3JFUrrlvyiaVlGsdIRMgmuvDluR6gC-TIPBEQLbl8c
+📄 TXT: google-site-verification=vHr-4wFDXLd3wze6i0YimpiGHC1u0Hy3x1dGAiyeHWs
+📄 TXT: v=spf1 -all
+📥 SOA-запис для chatgpt.com
+✅ SOA отримано за 0.042 сек
+📄 SOA: hassan.ns.cloudflare.com. dns.cloudflare.com. (ser: 2371478272)
+📥 CAA-запис для chatgpt.com
+ℹ️ Записів типу CAA немає
 
-🖥️ Запити до ns1.google.com (2001:4860:4802:32::a)
-📥 A-запис для google.com
-❌ Помилка при A: All nameservers failed to answer the query google.com. IN A: Server Do53:2001:4860:4802:32::a@53 answered [Errno 101] Network is unreachable
-📥 AAAA-запис для google.com
-❌ Помилка при AAAA: All nameservers failed to answer the query google.com. IN AAAA: Server Do53:2001:4860:4802:32::a@53 answered [Errno 101] Network is unreachable
-📥 MX-запис для google.com
-❌ Помилка при MX: All nameservers failed to answer the query google.com. IN MX: Server Do53:2001:4860:4802:32::a@53 answered [Errno 101] Network is unreachable
-📥 TXT-запис для google.com
-❌ Помилка при TXT: All nameservers failed to answer the query google.com. IN TXT: Server Do53:2001:4860:4802:32::a@53 answered [Errno 101] Network is unreachable
-📥 SOA-запис для google.com
-❌ Помилка при SOA: All nameservers failed to answer the query google.com. IN SOA: Server Do53:2001:4860:4802:32::a@53 answered [Errno 101] Network is unreachable
-📥 CAA-запис для google.com
-❌ Помилка при CAA: All nameservers failed to answer the query google.com. IN CAA: Server Do53:2001:4860:4802:32::a@53 answered [Errno 101] Network is unreachable
-⏱️ Загальний час: 1.586 сек
+🖥️ Запити до savanna.ns.cloudflare.com (172.64.34.136)
+📥 A-запис для chatgpt.com
+✅ A отримано за 0.027 сек
+📄 A: 172.64.155.209
+📄 A: 104.18.32.47
+📥 AAAA-запис для chatgpt.com
+✅ AAAA отримано за 0.029 сек
+📄 AAAA: 2606:4700:4400::6812:202f
+📄 AAAA: 2606:4700:4400::ac40:9bd1
+📥 MX-запис для chatgpt.com
+ℹ️ Записів типу MX немає
+📥 TXT-запис для chatgpt.com
+✅ TXT отримано за 0.027 сек
+📄 TXT: google-site-verification=qz8yKZH1f2h4Dl7S-nRAo0immoInmiosRhyjUxXuUOs
+📄 TXT: google-site-verification=rZodbEw8Hlw3gg7Z7mxkmQUNPnO_1khlohRX5D6qeUo
+📄 TXT: google-site-verification=u3JFUrrlvyiaVlGsdIRMgmuvDluR6gC-TIPBEQLbl8c
+📄 TXT: google-site-verification=vHr-4wFDXLd3wze6i0YimpiGHC1u0Hy3x1dGAiyeHWs
+📄 TXT: v=spf1 -all
+📥 SOA-запис для chatgpt.com
+✅ SOA отримано за 0.025 сек
+📄 SOA: hassan.ns.cloudflare.com. dns.cloudflare.com. (ser: 2371478272)
+📥 CAA-запис для chatgpt.com
+ℹ️ Записів типу CAA немає
+
+🖥️ Запити до savanna.ns.cloudflare.com (2803:f800:50::6ca2:c288)
+📥 A-запис для chatgpt.com
+❌ Помилка при A: All nameservers failed to answer the query chatgpt.com. IN A: Server Do53:2803:f800:50::6ca2:c288@53 answered [Errno 101] Network is unreachable
+📥 AAAA-запис для chatgpt.com
+❌ Помилка при AAAA: All nameservers failed to answer the query chatgpt.com. IN AAAA: Server Do53:2803:f800:50::6ca2:c288@53 answered [Errno 101] Network is unreachable
+📥 MX-запис для chatgpt.com
+❌ Помилка при MX: All nameservers failed to answer the query chatgpt.com. IN MX: Server Do53:2803:f800:50::6ca2:c288@53 answered [Errno 101] Network is unreachable
+📥 TXT-запис для chatgpt.com
+❌ Помилка при TXT: All nameservers failed to answer the query chatgpt.com. IN TXT: Server Do53:2803:f800:50::6ca2:c288@53 answered [Errno 101] Network is unreachable
+📥 SOA-запис для chatgpt.com
+❌ Помилка при SOA: All nameservers failed to answer the query chatgpt.com. IN SOA: Server Do53:2803:f800:50::6ca2:c288@53 answered [Errno 101] Network is unreachable
+📥 CAA-запис для chatgpt.com
+❌ Помилка при CAA: All nameservers failed to answer the query chatgpt.com. IN CAA: Server Do53:2803:f800:50::6ca2:c288@53 answered [Errno 101] Network is unreachable
+
+🖥️ Запити до savanna.ns.cloudflare.com (2a06:98c1:50::ac40:2288)
+📥 A-запис для chatgpt.com
+❌ Помилка при A: All nameservers failed to answer the query chatgpt.com. IN A: Server Do53:2a06:98c1:50::ac40:2288@53 answered [Errno 101] Network is unreachable
+📥 AAAA-запис для chatgpt.com
+❌ Помилка при AAAA: All nameservers failed to answer the query chatgpt.com. IN AAAA: Server Do53:2a06:98c1:50::ac40:2288@53 answered [Errno 101] Network is unreachable
+📥 MX-запис для chatgpt.com
+❌ Помилка при MX: All nameservers failed to answer the query chatgpt.com. IN MX: Server Do53:2a06:98c1:50::ac40:2288@53 answered [Errno 101] Network is unreachable
+📥 TXT-запис для chatgpt.com
+❌ Помилка при TXT: All nameservers failed to answer the query chatgpt.com. IN TXT: Server Do53:2a06:98c1:50::ac40:2288@53 answered [Errno 101] Network is unreachable
+📥 SOA-запис для chatgpt.com
+❌ Помилка при SOA: All nameservers failed to answer the query chatgpt.com. IN SOA: Server Do53:2a06:98c1:50::ac40:2288@53 answered [Errno 101] Network is unreachable
+📥 CAA-запис для chatgpt.com
+❌ Помилка при CAA: All nameservers failed to answer the query chatgpt.com. IN CAA: Server Do53:2a06:98c1:50::ac40:2288@53 answered [Errno 101] Network is unreachable
+
+🖥️ Запити до savanna.ns.cloudflare.com (2606:4700:50::a29f:2688)
+📥 A-запис для chatgpt.com
+❌ Помилка при A: All nameservers failed to answer the query chatgpt.com. IN A: Server Do53:2606:4700:50::a29f:2688@53 answered [Errno 101] Network is unreachable
+📥 AAAA-запис для chatgpt.com
+❌ Помилка при AAAA: All nameservers failed to answer the query chatgpt.com. IN AAAA: Server Do53:2606:4700:50::a29f:2688@53 answered [Errno 101] Network is unreachable
+📥 MX-запис для chatgpt.com
+❌ Помилка при MX: All nameservers failed to answer the query chatgpt.com. IN MX: Server Do53:2606:4700:50::a29f:2688@53 answered [Errno 101] Network is unreachable
+📥 TXT-запис для chatgpt.com
+❌ Помилка при TXT: All nameservers failed to answer the query chatgpt.com. IN TXT: Server Do53:2606:4700:50::a29f:2688@53 answered [Errno 101] Network is unreachable
+📥 SOA-запис для chatgpt.com
+❌ Помилка при SOA: All nameservers failed to answer the query chatgpt.com. IN SOA: Server Do53:2606:4700:50::a29f:2688@53 answered [Errno 101] Network is unreachable
+📥 CAA-запис для chatgpt.com
+❌ Помилка при CAA: All nameservers failed to answer the query chatgpt.com. IN CAA: Server Do53:2606:4700:50::a29f:2688@53 answered [Errno 101] Network is unreachable
+⏱️ Загальний час: 1.343 сек
