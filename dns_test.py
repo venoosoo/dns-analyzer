@@ -1,4 +1,5 @@
 
+
 import dns.message
 import dns.query
 import dns.exception
@@ -248,5 +249,6 @@ if __name__ == '__main__':
         save_to_json_a(result)
     else:
         logging.error("❌ Аналіз завершився з помилками.")
+
 
 
