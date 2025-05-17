@@ -1,3 +1,11 @@
+Перевірка сервера 198.41.0.4 на DNS CACHE POISONING
+[Fake] Sent 10000 fake DNS responses with random TXID
+[Real] Sent DNS query with TXID=2302
+[Real] Received response with TXID=2302
+[Real] Response TXID matches query TXID — атака не спрацювала
+Перевірка сервера 198.41.0.4 на DNS AMPLIFICATION ATTACK
+Отримано відповідь від 198.41.0.4 з кодом NOERROR та розміром 489 байт
+Відповідь має нормальний розмір — захист працює
 
 🔍 Початок аналізу домену: google.com
 
@@ -7,16 +15,10 @@
 🖥️ Запити до ns4.google.com (2001:4860:4802:38::a)
 📥 A-запит для google.com
 
-🖥️ Запити до ns3.google.com (2001:4860:4802:36::a)
-📥 A-запит для google.com
-
-🖥️ Запити до ns2.google.com (2001:4860:4802:34::a)
-📥 A-запит для google.com
-
 🖥️ Запити до ns2.google.com (216.239.34.10)
 📥 A-запит для google.com
 
-🖥️ Запити до ns3.google.com (216.239.36.10)
+🖥️ Запити до ns2.google.com (2001:4860:4802:34::a)
 📥 A-запит для google.com
 
 🖥️ Запити до ns1.google.com (216.239.32.10)
@@ -25,95 +27,125 @@
 🖥️ Запити до ns4.google.com (216.239.38.10)
 📥 A-запит для google.com
 
+🖥️ Запити до ns3.google.com (2001:4860:4802:36::a)
+📥 A-запит для google.com
+
+🖥️ Запити до ns3.google.com (216.239.36.10)
+📥 A-запит для google.com
+
 🖥️ Запити до ns1.google.com (2001:4860:4802:32::a)
 📥 A-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:38::a (A-запит): [Errno 101] Network is unreachable
-📥 AAAA-запит для google.com
-❌ Не вдалося підключитися до 2001:4860:4802:36::a (A-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:38::a для A: [Errno 101] Network is unreachable
 📥 AAAA-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:34::a (A-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:34::a для A: [Errno 101] Network is unreachable
+📥 AAAA-запит для google.com
+❌ Не вдалося підключитися до 2001:4860:4802:36::a (A-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:36::a для A: [Errno 101] Network is unreachable
 📥 AAAA-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:32::a (A-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:32::a для A: [Errno 101] Network is unreachable
 📥 AAAA-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:38::a (AAAA-запит): [Errno 101] Network is unreachable
-📥 MX-запит для google.com
-❌ Не вдалося підключитися до 2001:4860:4802:34::a (AAAA-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:38::a для AAAA: [Errno 101] Network is unreachable
 📥 MX-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:36::a (AAAA-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:36::a для AAAA: [Errno 101] Network is unreachable
+📥 MX-запит для google.com
+❌ Не вдалося підключитися до 2001:4860:4802:34::a (AAAA-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:34::a для AAAA: [Errno 101] Network is unreachable
+📥 MX-запит для google.com
+❌ Не вдалося підключитися до 2001:4860:4802:32::a (AAAA-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:32::a для AAAA: [Errno 101] Network is unreachable
 📥 MX-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:38::a (MX-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:38::a для MX: [Errno 101] Network is unreachable
 📥 TXT-запит для google.com
-❌ Не вдалося підключитися до 2001:4860:4802:32::a (AAAA-запит): [Errno 101] Network is unreachable
-📥 MX-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:36::a (MX-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:36::a для MX: [Errno 101] Network is unreachable
 📥 TXT-запит для google.com
-❌ Не вдалося підключитися до 2001:4860:4802:38::a (TXT-запит): [Errno 101] Network is unreachable
-📥 SOA-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:34::a (MX-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:34::a для MX: [Errno 101] Network is unreachable
 📥 TXT-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:32::a (MX-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:32::a для MX: [Errno 101] Network is unreachable
 📥 TXT-запит для google.com
-❌ Не вдалося підключитися до 2001:4860:4802:38::a (SOA-запит): [Errno 101] Network is unreachable
-📥 CAA-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:36::a (TXT-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:36::a для TXT: [Errno 101] Network is unreachable
 📥 SOA-запит для google.com
-❌ Не вдалося підключитися до 2001:4860:4802:32::a (TXT-запит): [Errno 101] Network is unreachable
+❌ Не вдалося підключитися до 2001:4860:4802:38::a (TXT-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:38::a для TXT: [Errno 101] Network is unreachable
 📥 SOA-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:34::a (TXT-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:34::a для TXT: [Errno 101] Network is unreachable
 📥 SOA-запит для google.com
-❌ Не вдалося підключитися до 2001:4860:4802:38::a (CAA-запит): [Errno 101] Network is unreachable
+❌ Не вдалося підключитися до 2001:4860:4802:32::a (TXT-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:32::a для TXT: [Errno 101] Network is unreachable
+📥 SOA-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:36::a (SOA-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:36::a для SOA: [Errno 101] Network is unreachable
+📥 CAA-запит для google.com
+❌ Не вдалося підключитися до 2001:4860:4802:38::a (SOA-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:38::a для SOA: [Errno 101] Network is unreachable
+📥 CAA-запит для google.com
+❌ Не вдалося підключитися до 2001:4860:4802:34::a (SOA-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:34::a для SOA: [Errno 101] Network is unreachable
 📥 CAA-запит для google.com
 ❌ Не вдалося підключитися до 2001:4860:4802:32::a (SOA-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:32::a для SOA: [Errno 101] Network is unreachable
 📥 CAA-запит для google.com
+❌ Не вдалося підключитися до 2001:4860:4802:38::a (CAA-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:38::a для CAA: [Errno 101] Network is unreachable
 ❌ Не вдалося підключитися до 2001:4860:4802:36::a (CAA-запит): [Errno 101] Network is unreachable
-❌ Не вдалося підключитися до 2001:4860:4802:34::a (SOA-запит): [Errno 101] Network is unreachable
-📥 CAA-запит для google.com
-❌ Не вдалося підключитися до 2001:4860:4802:32::a (CAA-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:36::a для CAA: [Errno 101] Network is unreachable
 ❌ Не вдалося підключитися до 2001:4860:4802:34::a (CAA-запит): [Errno 101] Network is unreachable
-✅ A-запис отримано за 0.040 сек: ['172.217.19.110']
+❌ Помилка при запиті до 2001:4860:4802:34::a для CAA: [Errno 101] Network is unreachable
+❌ Не вдалося підключитися до 2001:4860:4802:32::a (CAA-запит): [Errno 101] Network is unreachable
+❌ Помилка при запиті до 2001:4860:4802:32::a для CAA: [Errno 101] Network is unreachable
+✅ A-запис отримано за 0.041 сек: ['142.250.203.206']
 📥 AAAA-запит для google.com
-✅ A-запис отримано за 0.040 сек: ['172.217.19.110']
+✅ A-запис отримано за 0.042 сек: ['142.250.203.206']
 📥 AAAA-запит для google.com
-✅ A-запис отримано за 0.041 сек: ['172.217.19.110']
+✅ A-запис отримано за 0.044 сек: ['142.250.203.206']
 📥 AAAA-запит для google.com
-✅ A-запис отримано за 0.057 сек: ['172.217.19.110']
+✅ A-запис отримано за 0.073 сек: ['142.250.203.206']
 📥 AAAA-запит для google.com
-✅ AAAA-запис отримано за 0.038 сек: ['2a00:1450:400d:804::200e']
+✅ AAAA-запис отримано за 0.042 сек: ['2a00:1450:401b:810::200e']
 📥 MX-запит для google.com
-✅ AAAA-запис отримано за 0.039 сек: ['2a00:1450:400d:804::200e']
+✅ AAAA-запис отримано за 0.042 сек: ['2a00:1450:401b:810::200e']
 📥 MX-запит для google.com
-✅ AAAA-запис отримано за 0.040 сек: ['2a00:1450:400d:804::200e']
+✅ AAAA-запис отримано за 0.048 сек: ['2a00:1450:401b:810::200e']
 📥 MX-запит для google.com
-✅ AAAA-запис отримано за 0.059 сек: ['2a00:1450:400d:804::200e']
-📥 MX-запит для google.com
-✅ MX-запис отримано за 0.043 сек: ['10 smtp.google.com.']
-📥 TXT-запит для google.com
-✅ MX-запис отримано за 0.043 сек: ['10 smtp.google.com.']
-📥 TXT-запит для google.com
 ✅ MX-запис отримано за 0.042 сек: ['10 smtp.google.com.']
 📥 TXT-запит для google.com
-✅ TXT-запис отримано за 0.042 сек: ['"docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e"', '"docusign=1b0a6754-49b1-4db5-8540-d2c12664b289"', '"google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0"', '"cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963"', '"globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8="', '"facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95"']
-📥 SOA-запит для google.com
-✅ TXT-запис отримано за 0.040 сек: ['"apple-domain-verification=30afIBcvSuDV2PLX"', '"google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ"', '"onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef"', '"v=spf1 include:_spf.google.com ~all"', '"docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e"', '"cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963"']
-📥 SOA-запит для google.com
-✅ TXT-запис отримано за 0.041 сек: ['"MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB"', '"v=spf1 include:_spf.google.com ~all"', '"google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o"', '"facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95"', '"apple-domain-verification=30afIBcvSuDV2PLX"', '"cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963"']
-📥 SOA-запит для google.com
-✅ MX-запис отримано за 0.058 сек: ['10 smtp.google.com.']
+✅ MX-запис отримано за 0.044 сек: ['10 smtp.google.com.']
 📥 TXT-запит для google.com
-✅ SOA-запис отримано за 0.040 сек: ['ns1.google.com. dns-admin.google.com. 757369718 900 900 1800 60']
-📥 CAA-запит для google.com
-✅ SOA-запис отримано за 0.041 сек: ['ns1.google.com. dns-admin.google.com. 757369718 900 900 1800 60']
-📥 CAA-запит для google.com
-✅ SOA-запис отримано за 0.042 сек: ['ns1.google.com. dns-admin.google.com. 757110773 900 900 1800 60']
-📥 CAA-запит для google.com
-✅ TXT-запис отримано за 0.058 сек: ['"apple-domain-verification=30afIBcvSuDV2PLX"', '"MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB"', '"docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e"', '"facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95"', '"docusign=1b0a6754-49b1-4db5-8540-d2c12664b289"', '"cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963"']
+✅ AAAA-запис отримано за 0.065 сек: ['2a00:1450:401b:810::200e']
+📥 MX-запит для google.com
+✅ MX-запис отримано за 0.046 сек: ['10 smtp.google.com.']
+📥 TXT-запит для google.com
+✅ TXT-запис отримано за 0.042 сек: ['"apple-domain-verification=30afIBcvSuDV2PLX"', '"cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963"', '"onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef"', '"MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB"', '"docusign=1b0a6754-49b1-4db5-8540-d2c12664b289"', '"globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8="', '"docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e"']
 📥 SOA-запит для google.com
-✅ CAA-запис отримано за 0.039 сек: ['0 issue "pki.goog"']
-✅ CAA-запис отримано за 0.039 сек: ['0 issue "pki.goog"']
-✅ CAA-запис отримано за 0.041 сек: ['0 issue "pki.goog"']
-✅ SOA-запис отримано за 0.058 сек: ['ns1.google.com. dns-admin.google.com. 757110773 900 900 1800 60']
+✅ TXT-запис отримано за 0.045 сек: ['"google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0"', '"v=spf1 include:_spf.google.com ~all"', '"docusign=1b0a6754-49b1-4db5-8540-d2c12664b289"', '"docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e"', '"cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963"', '"google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o"']
+📥 SOA-запит для google.com
+✅ TXT-запис отримано за 0.053 сек: ['"docusign=1b0a6754-49b1-4db5-8540-d2c12664b289"', '"apple-domain-verification=30afIBcvSuDV2PLX"', '"v=spf1 include:_spf.google.com ~all"', '"globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8="', '"google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ"', '"cisco-ci-domain-verification=479146de172eb01ddee38b1a455ab9e8bb51542ddd7f1fa298557dfa7b22d963"']
+📥 SOA-запит для google.com
+✅ MX-запис отримано за 0.067 сек: ['10 smtp.google.com.']
+📥 TXT-запит для google.com
+✅ SOA-запис отримано за 0.043 сек: ['ns1.google.com. dns-admin.google.com. 759538996 900 900 1800 60']
 📥 CAA-запит для google.com
-✅ CAA-запис отримано за 0.058 сек: ['0 issue "pki.goog"']
+✅ SOA-запис отримано за 0.044 сек: ['ns1.google.com. dns-admin.google.com. 759538996 900 900 1800 60']
+📥 CAA-запит для google.com
+✅ SOA-запис отримано за 0.047 сек: ['ns1.google.com. dns-admin.google.com. 759538996 900 900 1800 60']
+📥 CAA-запит для google.com
+✅ CAA-запис отримано за 0.040 сек: ['0 issue "pki.goog"']
+✅ CAA-запис отримано за 0.043 сек: ['0 issue "pki.goog"']
+✅ TXT-запис отримано за 0.069 сек: ['"google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o"', '"google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ"', '"apple-domain-verification=30afIBcvSuDV2PLX"', '"v=spf1 include:_spf.google.com ~all"', '"onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef"', '"docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e"', '"facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95"']
+📥 SOA-запит для google.com
+✅ CAA-запис отримано за 0.050 сек: ['0 issue "pki.goog"']
+✅ SOA-запис отримано за 0.064 сек: ['ns1.google.com. dns-admin.google.com. 759538996 900 900 1800 60']
+📥 CAA-запит для google.com
+✅ CAA-запис отримано за 0.061 сек: ['0 issue "pki.goog"']
 
-🕒 Загальний час аналізу: 0.864 сек
+🕒 Загальний час аналізу: 0.975 сек
